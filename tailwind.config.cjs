@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.jsx"],
+  content: [
+    "./src/**/*.jsx",
+    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {
       screens: {
@@ -16,8 +19,12 @@ export default {
         "logo-twitter": "url(../src/imgs/twitter.png)",
         "logo-banner": "url(../src/imgs/banner.jpeg)",
         "img-perfil": "url(../src/imgs/perfil.png)",
+        "img-1": "url(../src/imgs/img1.jpg)",
+        "img-2": "url(../src/imgs/img2.jpg)",
+        "img-3": "url(../src/imgs/img3.jpg)",
+        "img-4": "url(../src/imgs/img4.jpg)",
       },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };
