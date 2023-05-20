@@ -1,9 +1,5 @@
 function App() {
-  return (
-    <>
-      <h1 className="bg-black">asas</h1>
-    </>
-  );
+  return <></>;
 }
 
 export default App;
