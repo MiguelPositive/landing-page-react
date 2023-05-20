@@ -7,7 +7,7 @@ const Banner = () => {
 
   return (
     <div
-      className={`relative z-0 w-full h-[10rem] bg-logo-banner bg-contain bg-center  rounded-md ${activeBlur}`}
+      className={`relative z-0 w-full h-[10rem] bg-logo-banner bg-contain bg-center rounded-md ${activeBlur}`}
     ></div>
   );
 };
