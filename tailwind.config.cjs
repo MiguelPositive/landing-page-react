@@ -14,6 +14,7 @@ export default {
         "logo-facebook": "url(../src/imgs/facebook.png)",
         "logo-instagram": "url(../src/imgs/instagram.png)",
         "logo-twitter": "url(../src/imgs/twitter.png)",
+        "logo-banner": "url(../src/imgs/banner.jpeg)",
       },
     },
   },

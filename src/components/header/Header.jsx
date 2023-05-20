@@ -4,8 +4,9 @@ import { useContext } from "react";
 import { store } from "../context/Context";
 
 const Header = () => {
-  const { showMenu, setShowMenu } = useContext(store);
-  const [activeBlur, setActiveBlur] = useState("");
+  const { showMenu, setShowMenu, activeBlur, setActiveBlur } =
+    useContext(store);
+
   const [animateMenu, setAnimateMenu] = useState("hidden");
 
   const openMenu = () => {
@@ -21,7 +22,7 @@ const Header = () => {
   useEffect(() => {
     if (showMenu) {
       setActiveBlur("blur 900px:blur-none");
-      setAnimateMenu("animate__bounceIn visible z-10");
+      setAnimateMenu("animate__bounceIn visible");
     } else if (showMenu === false) {
       setTimeout(() => {
         setActiveBlur("");
@@ -69,7 +70,7 @@ const Header = () => {
       <div
         id="items-menu"
         className={`${animateMenu}
-       animate__animated absolute top-0 -right-2 text-xl rounded-md shadow-md w-[92vw] 350px:w-[80vw] 400px:w-[60vw] 450px:w-[50vw] 750px:w-[40vw] 900px:static 900px:flex 900px:justify-end 900px:items-center 900px:gap-5 900px:w-[60vw] 900px:shadow-none 900px:rounded-s-none`}
+       animate__animated absolute z-10 top-0 -right-2 text-xl rounded-md shadow-md w-[92vw] 350px:w-[80vw] 400px:w-[60vw] 450px:w-[50vw] 750px:w-[40vw] 900px:static 900px:flex 900px:justify-end 900px:items-center 900px:gap-5 900px:w-[60vw] 900px:shadow-none 900px:rounded-s-none`}
       >
         <a href="">
           <div className="text-center mt-5 mb-3 900px:m-0 animation-all duration-75 900px:hover:font-extrabold">

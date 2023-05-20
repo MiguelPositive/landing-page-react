@@ -6,11 +6,14 @@ export const store = createContext();
 
 const Context = ({ children }) => {
   const [showMenu, setShowMenu] = useState(null);
+  const [activeBlur, setActiveBlur] = useState("");
   return (
     <store.Provider
       value={{
         showMenu,
         setShowMenu,
+        activeBlur,
+        setActiveBlur,
       }}
     >
       {children}
