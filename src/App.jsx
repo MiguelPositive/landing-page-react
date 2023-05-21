@@ -5,6 +5,7 @@ import Iam from "./components/iam/Iam";
 import PageCarousel from "./components/carousel/PageCarousel";
 import ComunityVideo from "./components/comunityVideo/ComunityVideo";
 import Results from "./components/results/Results";
+import TitleResults from "./components/help/TitleResults";
 
 function App() {
   return (
@@ -27,10 +28,10 @@ function App() {
         </div>
 
         <div className="mt-5">
-          <div className="flex justify-center items-center text-center h-48 bg-[#94E959] text-3xl font-extrabold mb-5">
-            Resultados del progreso
-          </div>
           <div className="mt-10 pl-5 pr-5 900px:pl-16 900px:pr-16">
+            <div className="mt-5">
+              <TitleResults />
+            </div>
             <div className="mb-10">
               <Results
                 img={"bg-img-comunity-1"}

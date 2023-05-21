@@ -1,11 +1,15 @@
 import React from "react";
+import { useContext } from "react";
+import { store } from "../context/Context";
 
 const Results = ({ img, title, text, reverse }) => {
+  const { activeBlur } = useContext(store);
+
   return (
     <div
-      className={`flex justify-center items-center gap-10 flex-wrap 900px:flex-nowrap 900px:justify-between  ${
-        reverse ? "900px:flex-row-reverse" : ""
-      }`}
+      className={`flex justify-center items-center gap-10 flex-wrap 900px:flex-nowrap 900px:justify-between 
+       ${reverse ? "900px:flex-row-reverse" : ""} 
+       ${activeBlur}`}
     >
       <div
         id="img-result"

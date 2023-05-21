@@ -1,8 +1,13 @@
 import React from "react";
+import { useContext } from "react";
+import { store } from "../context/Context";
 
 const ComunityVideo = () => {
+  const { activeBlur } = useContext(store);
   return (
-    <div className="flex justify-center items-center flex-wrap-reverse 900px:flex-nowrap 900px:gap-10">
+    <div
+      className={`flex justify-center items-center flex-wrap-reverse 900px:flex-nowrap 900px:gap-10 ${activeBlur}`}
+    >
       <div id="container-video" className="w-full h-[20rem] 900px:w-[60%]">
         <iframe
           className="h-full w-full rounded-md mt-5 900px:mt-0"
