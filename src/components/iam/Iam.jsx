@@ -16,16 +16,16 @@ const Iam = () => {
 
       <div id="text-i-am" className="text-justify">
         <p className="mb-3">
-          Esmer Rojas Rubriche, nací en Bucaramanga, el 20 de marzo de 1975
-          Casado y padre de dos hijos.
+          <b> Esmer Rojas Rubriche</b>, nací en Bucaramanga, el 20 de marzo de
+          1975 Casado y padre de dos hijos. Bachiller técnico e Ingeniero de
+          Sistemas con énfasis en Telecomunicaciones.{" "}
           <b>
-            Bachiller técnico e Ingeniero de Sistemas con énfasis en
-            Telecomunicaciones.
+            Soy un Líder Social, con sensibilidad y gran empeño en ayudar a los
+            más necesitados y excluidos, con la mirada fija en los niños y
+            adultos mayores necesitados
           </b>
-          Soy un Líder Social, con sensibilidad y gran empeño en ayudar a los
-          más necesitados y excluidos, con la mirada fija en los niños y adultos
-          mayores necesitados, tengo gran conciencia por el medio ambiente, me
-          gustan los deportes especialmente el fútbol.
+          , tengo gran conciencia por el medio ambiente, me gustan los deportes
+          especialmente el fútbol.
         </p>
 
         <p className="mb-3">
@@ -35,7 +35,9 @@ const Iam = () => {
         </p>
 
         <p>
-          <b>Me rijo por principios de servicio, honestidad y transparencia.</b>
+          <b>
+            Me rijo por principios de servicio, honestidad y transparencia.{" "}
+          </b>
           Considero que el fortalecimiento de la familia, poder recibir una
           buena educación tanto en valores como académicamente, unidos al
           deporte y el buen uso del tiempo libre son fundamentales para el
