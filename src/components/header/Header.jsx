@@ -8,6 +8,7 @@ const Header = () => {
     useContext(store);
 
   const [animateMenu, setAnimateMenu] = useState("hidden");
+  const [changeIcon, setChangeIcon] = useState("bi bi-list");
 
   const openMenu = () => {
     if (showMenu === null) {
@@ -31,6 +32,17 @@ const Header = () => {
     }
   }, [showMenu]);
 
+  useEffect(() => {
+    if (showMenu) {
+      setTimeout(() => {
+        setChangeIcon("bi bi-x-lg z-20");
+      }, 500);
+    } else if (showMenu === false) {
+      setTimeout(() => {
+        setChangeIcon("bi bi-list");
+      }, 500);
+    }
+  }, [showMenu]);
   return (
     <div className="relative flex justify-start items-start 900px:justify-between">
       <div
@@ -61,9 +73,7 @@ const Header = () => {
 
       <i
         id="button-menu"
-        className={`${
-          showMenu ? "z-20" : ""
-        } absolute top-0 right-0 bi bi-list text-3xl cursor-pointer 900px:hidden`}
+        className={`${changeIcon} absolute top-0 right-0 bi bi-list text-3xl cursor-pointer 900px:hidden`}
         onClick={openMenu}
       ></i>
 
