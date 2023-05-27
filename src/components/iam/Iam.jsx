@@ -10,7 +10,7 @@ const Iam = () => {
       <div className="flex justify-center items-center mb-6">
         <div
           id="image-i-am"
-          className="w-[10rem] h-[10rem] bg-img-perfil bg-cover rounded-full shadow-md shadow-black/95"
+          className="w-[10rem] h-[10rem] bg-img-perfil bg-cover bg-top rounded-full shadow-md shadow-black/95"
         ></div>
       </div>
 
