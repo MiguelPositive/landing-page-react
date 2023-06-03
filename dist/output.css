@@ -2601,6 +2601,10 @@ input:checked + .toggle-bg {
   background-position: center;
 }
 
+.bg-top {
+  background-position: top;
+}
+
 .fill-blue-600 {
   fill: #1C64F2;
 }
