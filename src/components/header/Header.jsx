@@ -105,6 +105,11 @@ const Header = () => {
             Testimonios
           </div>
         </a>
+        <a href="">
+          <div className="text-center mb-5 animation-all duration-75 900px:m-0 900px:hover:font-bold">
+            Grupo de trabajo
+          </div>
+        </a>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import ComunityVideo from "../comunityVideo/ComunityVideo";
 import TitleResults from "../help/TitleResults";
 import Results from "../results/Results";
 import Iam from "../iam/Iam";
+import Testimonials from "../testimonials/Testimonials";
 import { useContext } from "react";
 import { store } from "../context/Context";
 
@@ -70,6 +71,47 @@ const Page = () => {
               }
               reverse={true}
             />
+          </div>
+
+          <div className="grid grid-cols-1 900px:grid-cols-2 gap-10 ">
+            <div>
+              <Testimonials
+                name={"Paula Guzman"}
+                text={
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae turpis vel augue iaculis varius. Sed ullamcorper sed sapien ut tincidunt. In euismod, leo et iaculis feugiat, risus ex fermentum lacus, a facilisis diam arcu et lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque neque nisl, dictum et felis nec, imperdiet lacinia justo. Etiam at pulvinar risus, vel accumsan turpis. Cras non erat vel elit gravida laoreet."
+                }
+                photo="1"
+              />
+            </div>
+
+            <div>
+              <Testimonials
+                name={"Rafael Contreras"}
+                text={
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae turpis vel augue iaculis varius. Sed ullamcorper sed sapien ut tincidunt. In euismod, leo et iaculis feugiat, risus ex fermentum lacus, a facilisis diam arcu et lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque neque nisl, dictum et felis nec, imperdiet lacinia justo. Etiam at pulvinar risus, vel accumsan turpis. Cras non erat vel elit gravida laoreet."
+                }
+                photo={"2"}
+              />
+            </div>
+
+            <div>
+              <Testimonials
+                name={"Daniel Zapata"}
+                text={
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae turpis vel augue iaculis varius. Sed ullamcorper sed sapien ut tincidunt. In euismod, leo et iaculis feugiat, risus ex fermentum lacus, a facilisis diam arcu et lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque neque nisl, dictum et felis nec, imperdiet lacinia justo. Etiam at pulvinar risus, vel accumsan turpis. Cras non erat vel elit gravida laoreet."
+                }
+                photo={"3"}
+              />
+            </div>
+            <div>
+              <Testimonials
+                name={"Jose Maria"}
+                text={
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae turpis vel augue iaculis varius. Sed ullamcorper sed sapien ut tincidunt. In euismod, leo et iaculis feugiat, risus ex fermentum lacus, a facilisis diam arcu et lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque neque nisl, dictum et felis nec, imperdiet lacinia justo. Etiam at pulvinar risus, vel accumsan turpis. Cras non erat vel elit gravida laoreet."
+                }
+                photo={"4"}
+              />
+            </div>
           </div>
         </div>
       </div>

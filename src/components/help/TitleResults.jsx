@@ -7,7 +7,7 @@ const TitleResults = () => {
 
   return (
     <div
-      className={`flex justify-center items-center text-center h-48 bg-[#94E959] text-3xl font-extrabold mb-5 ${activeBlur}`}
+      className={`flex justify-center items-center text-center h-48 bg-[#9AE589] text-3xl font-extrabold mb-5 ${activeBlur}`}
     >
       Resultados del progreso
     </div>
