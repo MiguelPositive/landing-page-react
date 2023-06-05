@@ -2,7 +2,7 @@ import React from "react";
 
 const Testimonials = ({ name, photo, text }) => {
   return (
-    <div className="w-full h-full bg-[#9AE589] rounded-md shadow-xl shadow-black/50 p-6 overflow-hidden transition-all duration-150 hover:shadow-black/70 900px:hover:scale-105">
+    <div className="w-full h-full bg-[#9AE589] rounded-md shadow-xl shadow-black/50 p-6 overflow-hidden transition-all duration-150 hover:shadow-black/70 hover:scale-105">
       <div className="flex flex-wrap-reverse justify-evenly items-center mb-5">
         <div
           id="image-testimony"
