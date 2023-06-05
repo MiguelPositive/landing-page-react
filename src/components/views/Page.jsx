@@ -3,7 +3,7 @@ import Header from "../header/Header";
 import Banner from "../banner/Banner";
 import PageCarousel from "../carousel/PageCarousel";
 import ComunityVideo from "../comunityVideo/ComunityVideo";
-import TitleResults from "../help/TitleResults";
+import Title from "../help/Title";
 import Results from "../results/Results";
 import Iam from "../iam/Iam";
 import Testimonials from "../testimonials/Testimonials";
@@ -38,7 +38,11 @@ const Page = () => {
       <div className="mt-5">
         <div className="mt-10 pl-5 pr-5 900px:pl-16 900px:pr-16">
           <div className="mt-5">
-            <TitleResults />
+            <Title
+              title={"Resultados del progreso"}
+              bgColor={"#9AE589"}
+              textColor={"black"}
+            />
           </div>
           <div className="mb-10">
             <Results
@@ -73,6 +77,12 @@ const Page = () => {
             />
           </div>
 
+          <Title
+            title={"Testimonios"}
+            bgColor={"#FF8956"}
+            textColor={"white"}
+          />
+
           <div className="grid grid-cols-1 900px:grid-cols-2 gap-10 ">
             <div>
               <Testimonials
@@ -90,7 +100,7 @@ const Page = () => {
                 text={
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae turpis vel augue iaculis varius. Sed ullamcorper sed sapien ut tincidunt. In euismod, leo et iaculis feugiat, risus ex fermentum lacus, a facilisis diam arcu et lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque neque nisl, dictum et felis nec, imperdiet lacinia justo. Etiam at pulvinar risus, vel accumsan turpis. Cras non erat vel elit gravida laoreet."
                 }
-                photo={"2"}
+                photo="2"
               />
             </div>
 
@@ -100,7 +110,7 @@ const Page = () => {
                 text={
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae turpis vel augue iaculis varius. Sed ullamcorper sed sapien ut tincidunt. In euismod, leo et iaculis feugiat, risus ex fermentum lacus, a facilisis diam arcu et lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque neque nisl, dictum et felis nec, imperdiet lacinia justo. Etiam at pulvinar risus, vel accumsan turpis. Cras non erat vel elit gravida laoreet."
                 }
-                photo={"3"}
+                photo="3"
               />
             </div>
             <div>
@@ -109,7 +119,7 @@ const Page = () => {
                 text={
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae turpis vel augue iaculis varius. Sed ullamcorper sed sapien ut tincidunt. In euismod, leo et iaculis feugiat, risus ex fermentum lacus, a facilisis diam arcu et lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque neque nisl, dictum et felis nec, imperdiet lacinia justo. Etiam at pulvinar risus, vel accumsan turpis. Cras non erat vel elit gravida laoreet."
                 }
-                photo={"4"}
+                photo="4"
               />
             </div>
           </div>

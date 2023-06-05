@@ -2,14 +2,14 @@ import React from "react";
 import { useContext } from "react";
 import { store } from "../context/Context";
 
-const TitleResults = () => {
+const TitleResults = ({ title, bgColor, textColor }) => {
   const { activeBlur } = useContext(store);
 
   return (
     <div
-      className={`flex justify-center items-center text-center h-48 bg-[#9AE589] text-3xl font-extrabold mb-5 ${activeBlur}`}
+      className={`flex justify-center items-center text-center h-48 bg-[${bgColor}] text-3xl text-${textColor} font-bold mb-5 rounded-md ${activeBlur}`}
     >
-      Resultados del progreso
+      {title}
     </div>
   );
 };

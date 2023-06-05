@@ -1,13 +1,12 @@
 import React from "react";
 
 const Testimonials = ({ name, photo, text }) => {
-  console.log(photo);
   return (
     <div className="w-full h-full bg-[#9AE589] rounded-md shadow-xl shadow-black/50 p-6 overflow-hidden transition-all duration-150 hover:shadow-black/70 900px:hover:scale-105">
       <div className="flex flex-wrap-reverse justify-evenly items-center mb-5">
         <div
           id="image-testimony"
-          className={`w-[calc(4rem+0.5em)] h-[calc(4rem+0.5em)] rounded-full img-test-${photo} bg-top bg-cover shadow-lg shadow-black/50 900px:w-[calc(8rem+0.5em)] 900px:h-[calc(8rem+0.5em)]`}
+          className={`w-[calc(4rem+0.5em)] h-[calc(4rem+0.5em)] rounded-full bg-img-test-${photo} bg-top bg-cover shadow-lg shadow-black/50 900px:w-[calc(8rem+0.5em)] 900px:h-[calc(8rem+0.5em)]`}
         ></div>
         <div
           id="title-tesyimony"
