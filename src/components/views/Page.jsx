@@ -19,10 +19,10 @@ const Page = () => {
         showMenu ? "overflow-hidden" : ""
       }`}
     >
-      <div className="pl-5 pr-5 mt-3 900px:pl-16 900px:pr-16">
+      <div className="pl-5 pr-5 pt-3 900px:pl-16  900px:pr-16">
         <Header />
       </div>
-      <div className="mt-4 pl-5 pr-5 flex justify-center 900px:pl-16 900px:pr-16">
+      <div className="pt-4 pl-5 pr-5 flex justify-center  900px:pl-16 900px:pr-16">
         <Banner />
       </div>
       <div className="mt-5 pl-5 pr-5 900px:pl-16 900px:pr-16">
@@ -35,16 +35,16 @@ const Page = () => {
         <ComunityVideo />
       </div>
 
-      <div className="mt-5">
-        <div className="mt-10 pl-5 pr-5 900px:pl-16 900px:pr-16">
-          <div className="mt-5">
+      <div className="pt-5 pb-5 bg-slate-200">
+        <div className="pt-10 pl-5 pr-5  900px:pl-16 900px:pr-16">
+          <div className="pt-5">
             <Title
               title={"Resultados del progreso"}
               bgColor={"#9AE589"}
               textColor={"black"}
             />
           </div>
-          <div className="mb-10">
+          <div className="mb-10 pt-10">
             <Results
               img={"bg-img-comunity-1"}
               title={"Titulo de imagen 1"}
@@ -76,53 +76,49 @@ const Page = () => {
               reverse={true}
             />
           </div>
+        </div>
+      </div>
 
-          <Title
-            title={"Testimonios"}
-            bgColor={"#FF8956"}
-            textColor={"white"}
+      <Title title={"Testimonios"} bgColor={"#FF8956"} textColor={"white"} />
+
+      <div className="pl-10 pr-10 pb-10 grid grid-cols-1 900px:grid-cols-2 gap-10 ">
+        <div>
+          <Testimonials
+            name={"Paula Guzman"}
+            text={
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae turpis vel augue iaculis varius. Sed ullamcorper sed sapien ut tincidunt. In euismod, leo et iaculis feugiat, risus ex fermentum lacus, a facilisis diam arcu et lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque neque nisl, dictum et felis nec, imperdiet lacinia justo. Etiam at pulvinar risus, vel accumsan turpis. Cras non erat vel elit gravida laoreet."
+            }
+            photo="1"
           />
+        </div>
 
-          <div className="grid grid-cols-1 900px:grid-cols-2 gap-10 ">
-            <div>
-              <Testimonials
-                name={"Paula Guzman"}
-                text={
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae turpis vel augue iaculis varius. Sed ullamcorper sed sapien ut tincidunt. In euismod, leo et iaculis feugiat, risus ex fermentum lacus, a facilisis diam arcu et lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque neque nisl, dictum et felis nec, imperdiet lacinia justo. Etiam at pulvinar risus, vel accumsan turpis. Cras non erat vel elit gravida laoreet."
-                }
-                photo="1"
-              />
-            </div>
+        <div>
+          <Testimonials
+            name={"Rafael Contreras"}
+            text={
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae turpis vel augue iaculis varius. Sed ullamcorper sed sapien ut tincidunt. In euismod, leo et iaculis feugiat, risus ex fermentum lacus, a facilisis diam arcu et lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque neque nisl, dictum et felis nec, imperdiet lacinia justo. Etiam at pulvinar risus, vel accumsan turpis. Cras non erat vel elit gravida laoreet."
+            }
+            photo="2"
+          />
+        </div>
 
-            <div>
-              <Testimonials
-                name={"Rafael Contreras"}
-                text={
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae turpis vel augue iaculis varius. Sed ullamcorper sed sapien ut tincidunt. In euismod, leo et iaculis feugiat, risus ex fermentum lacus, a facilisis diam arcu et lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque neque nisl, dictum et felis nec, imperdiet lacinia justo. Etiam at pulvinar risus, vel accumsan turpis. Cras non erat vel elit gravida laoreet."
-                }
-                photo="2"
-              />
-            </div>
-
-            <div>
-              <Testimonials
-                name={"Daniel Zapata"}
-                text={
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae turpis vel augue iaculis varius. Sed ullamcorper sed sapien ut tincidunt. In euismod, leo et iaculis feugiat, risus ex fermentum lacus, a facilisis diam arcu et lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque neque nisl, dictum et felis nec, imperdiet lacinia justo. Etiam at pulvinar risus, vel accumsan turpis. Cras non erat vel elit gravida laoreet."
-                }
-                photo="3"
-              />
-            </div>
-            <div>
-              <Testimonials
-                name={"Jose Maria"}
-                text={
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae turpis vel augue iaculis varius. Sed ullamcorper sed sapien ut tincidunt. In euismod, leo et iaculis feugiat, risus ex fermentum lacus, a facilisis diam arcu et lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque neque nisl, dictum et felis nec, imperdiet lacinia justo. Etiam at pulvinar risus, vel accumsan turpis. Cras non erat vel elit gravida laoreet."
-                }
-                photo="4"
-              />
-            </div>
-          </div>
+        <div>
+          <Testimonials
+            name={"Daniel Zapata"}
+            text={
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae turpis vel augue iaculis varius. Sed ullamcorper sed sapien ut tincidunt. In euismod, leo et iaculis feugiat, risus ex fermentum lacus, a facilisis diam arcu et lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque neque nisl, dictum et felis nec, imperdiet lacinia justo. Etiam at pulvinar risus, vel accumsan turpis. Cras non erat vel elit gravida laoreet."
+            }
+            photo="3"
+          />
+        </div>
+        <div>
+          <Testimonials
+            name={"Jose Maria"}
+            text={
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae turpis vel augue iaculis varius. Sed ullamcorper sed sapien ut tincidunt. In euismod, leo et iaculis feugiat, risus ex fermentum lacus, a facilisis diam arcu et lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque neque nisl, dictum et felis nec, imperdiet lacinia justo. Etiam at pulvinar risus, vel accumsan turpis. Cras non erat vel elit gravida laoreet."
+            }
+            photo="4"
+          />
         </div>
       </div>
     </div>

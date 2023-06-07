@@ -2382,14 +2382,24 @@ input:checked + .toggle-bg {
   background-color: rgb(159 88 10 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#FF8956\] {
+.bg-slate-300 {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 137 86 / var(--tw-bg-opacity));
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#FF6709\] {
+.bg-slate-100 {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 103 9 / var(--tw-bg-opacity));
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
+
+.bg-slate-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
+.bg-slate-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-50 {
@@ -2450,22 +2460,6 @@ input:checked + .toggle-bg {
 
 .bg-logo-twitter {
   background-image: url(../src/imgs/twitter.png);
-}
-
-.bg-img-test-2 {
-  background-image: url(../src/imgs/testimony2.jpg);
-}
-
-.bg-img-test-1 {
-  background-image: url(../src/imgs/testimony1.jpg);
-}
-
-.bg-img-test-3 {
-  background-image: url(../src/imgs/testimony3.jpg);
-}
-
-.bg-img-test-4 {
-  background-image: url(../src/imgs/testimony4.jpg);
 }
 
 .from-blue-500 {
@@ -2862,8 +2856,24 @@ input:checked + .toggle-bg {
   padding-top: 0px;
 }
 
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pb-5 {
+  padding-bottom: 1.25rem;
 }
 
 .text-left {
@@ -2915,10 +2925,6 @@ input:checked + .toggle-bg {
 
 .font-bold {
   font-weight: 700;
-}
-
-.font-extrabold {
-  font-weight: 800;
 }
 
 .font-medium {
@@ -3213,16 +3219,6 @@ input:checked + .toggle-bg {
 .text-yellow-900 {
   --tw-text-opacity: 1;
   color: rgb(99 49 18 / var(--tw-text-opacity));
-}
-
-.text-\[\#000000\] {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.text-\[\#FFFFFF\] {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -5562,12 +5558,6 @@ input:checked + .toggle-bg {
   .\39 00px\:blur-none {
     --tw-blur: blur(0);
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-  }
-
-  .\39 00px\:hover\:scale-105:hover {
-    --tw-scale-x: 1.05;
-    --tw-scale-y: 1.05;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .\39 00px\:hover\:font-bold:hover {
