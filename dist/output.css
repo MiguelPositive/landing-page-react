@@ -2467,6 +2467,22 @@ input:checked + .toggle-bg {
   background-image: url(../src/imgs/twitter.png);
 }
 
+.bg-img-test-1 {
+  background-image: url(../src/imgs/testimony1.jpg);
+}
+
+.bg-img-test-2 {
+  background-image: url(../src/imgs/testimony2.jpg);
+}
+
+.bg-img-test-3 {
+  background-image: url(../src/imgs/testimony3.jpg);
+}
+
+.bg-img-test-4 {
+  background-image: url(../src/imgs/testimony4.jpg);
+}
+
 .from-blue-500 {
   --tw-gradient-from: #3F83F8 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(63 131 248 / 0) var(--tw-gradient-to-position);
