@@ -79,9 +79,11 @@ const Page = () => {
         </div>
       </div>
 
-      <Title title={"Testimonios"} bgColor={"#FF8956"} textColor={"white"} />
+      <div className="mt-10 pl-10 pr-10">
+        <Title title="Testimonios" bgColor="#FF8956" textColor="white" />
+      </div>
 
-      <div className="pl-10 pr-10 pb-10 grid grid-cols-1 900px:grid-cols-2 gap-10 ">
+      <div className="p-10 grid grid-cols-1 900px:grid-cols-2 gap-10 ">
         <div>
           <Testimonials
             name={"Paula Guzman"}
