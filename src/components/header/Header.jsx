@@ -52,19 +52,25 @@ const Header = () => {
         <p className="mr-5">Sigueme</p>
         <div id="social-netoworks-icons" className="flex items-center gap-5">
           <div>
-            <a target="_blank" href="#">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/profile.php?id=100092693829056&mibextid=ZbWKwL"
+            >
               <div className="w-7 h-7 bg-logo-facebook bg-cover"></div>
             </a>
           </div>
 
           <div>
-            <a target="_blank" href="#">
+            <a
+              target="_blank"
+              href="https://instagram.com/esmerrojasr?igshid=MzNlNGNkZWQ4Mg=="
+            >
               <div className="w-7 h-7 bg-logo-instagram bg-cover"></div>
             </a>
           </div>
 
           <div>
-            <a target="_blank" href="#">
+            <a target="_blank" href="https://twitter.com/Esmerrojasr">
               <div className="w-7 h-7 bg-logo-twitter bg-cover"></div>
             </a>
           </div>
