@@ -1188,6 +1188,14 @@ input:checked + .toggle-bg {
   top: 3.5rem;
 }
 
+.right-2 {
+  right: 0.5rem;
+}
+
+.bottom-2 {
+  bottom: 0.5rem;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -2214,6 +2222,11 @@ input:checked + .toggle-bg {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
+.border-\[\#FF6709\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 103 9 / var(--tw-border-opacity));
+}
+
 .\!bg-transparent {
   background-color: transparent !important;
 }
@@ -2458,6 +2471,45 @@ input:checked + .toggle-bg {
 .bg-yellow-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(159 88 10 / var(--tw-bg-opacity));
+}
+
+.bg-\[\] {
+  background-color: ;
+}
+
+.bg-\[\#79B95A\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(121 185 90 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#ECBD58\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 189 88 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#D6873C\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 135 60 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#FB933C\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 147 60 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#FF6709\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 103 9 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#6ABF45\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(106 191 69 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#B63A22\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(182 58 34 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-50 {
@@ -3597,6 +3649,16 @@ input:checked + .toggle-bg {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
+.hover\:-translate-y-2:hover {
+  --tw-translate-y: -0.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:-translate-y-1:hover {
+  --tw-translate-y: -0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -3813,6 +3875,11 @@ input:checked + .toggle-bg {
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
+.hover\:text-\[\#FF6709\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 103 9 / var(--tw-text-opacity));
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -3830,6 +3897,11 @@ input:checked + .toggle-bg {
 
 .hover\:shadow-black\/50:hover {
   --tw-shadow-color: rgb(0 0 0 / 0.5);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.hover\:shadow-black\/60:hover {
+  --tw-shadow-color: rgb(0 0 0 / 0.6);
   --tw-shadow: var(--tw-shadow-colored);
 }
 

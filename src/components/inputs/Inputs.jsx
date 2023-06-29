@@ -32,7 +32,9 @@ const Inputs = ({ label, type, element }) => {
   return (
     <div className=" text-xl">
       <div className="mb-2">
-        <label htmlFor="input">{label}</label>
+        <label htmlFor="input" className="text-white">
+          {label}
+        </label>
       </div>
 
       <div>
@@ -45,7 +47,7 @@ const Inputs = ({ label, type, element }) => {
 
         {element == "password" ? (
           <i
-            className={`${changeEye} absolute bottom-8 right-8 cursor-pointer`}
+            className={`${changeEye} absolute bottom-2 right-2 cursor-pointer`}
             onClick={handleChangeEye}
           ></i>
         ) : (

@@ -78,7 +78,8 @@ const Header = () => {
         </div>
       </div> */}
 
-      <div className="rounded-full border-2 border-red-300  p-2 cursor-pointer transition-all duration-100 hover:font-bold">
+      <div className="rounded-full border-2 border-[#FF6709]  p-2 cursor-pointer transition-all duration-100 hover:font-bold hover:text-[#FF6709]">
+        <i class="mr-2 bi bi-person-circle"></i>
         Unete
       </div>
 
