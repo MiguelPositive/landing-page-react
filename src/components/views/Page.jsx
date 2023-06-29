@@ -7,6 +7,8 @@ import Title from "../help/Title";
 import Results from "../results/Results";
 import Iam from "../iam/Iam";
 import Testimonials from "../testimonials/Testimonials";
+import Login from "../modals/Login";
+import Register from "../modals/Register";
 import { useContext } from "react";
 import { store } from "../context/Context";
 
@@ -15,13 +17,18 @@ const Page = () => {
 
   return (
     <div
-      className={`pb-10 900px:pb-5 h-screen ${
+      className={`pb-10 900px:pb-5 h-screen  ${
         showMenu ? "overflow-hidden" : ""
       }`}
     >
       <div className="pl-5 pr-5 pt-3 900px:pl-16  900px:pr-16">
         <Header />
       </div>
+
+      <div>
+        <Register />
+      </div>
+
       <div className="pt-4 pl-5 pr-5 flex justify-center  900px:pl-16 900px:pr-16">
         <Banner />
       </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { store } from "../context/Context";
+import Register from "../modals/Register";
 
 const Header = () => {
   const { showMenu, setShowMenu, activeBlur, setActiveBlur } =
@@ -45,7 +46,7 @@ const Header = () => {
   }, [showMenu]);
   return (
     <div className="relative flex justify-start items-start 900px:justify-between">
-      <div
+      {/* <div
         id="social-networks"
         className={`flex justify-center items-center ${activeBlur} `}
       >
@@ -75,6 +76,10 @@ const Header = () => {
             </a>
           </div>
         </div>
+      </div> */}
+
+      <div className="rounded-full border-2 border-red-300  p-2 cursor-pointer transition-all duration-100 hover:font-bold">
+        Unete
       </div>
 
       <i
