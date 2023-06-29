@@ -18,6 +18,10 @@ const Header = () => {
   const [animateMenu, setAnimateMenu] = useState("hidden");
   const [changeIcon, setChangeIcon] = useState("bi bi-list");
 
+  const [hiddenOptions, setHiddenOptions] = useState("hidden");
+  const [animationPading, setAnimationPading] = useState("pb-0");
+  const [optionsAnimation, setOptionsAnimation] = useState("");
+
   const openMenu = () => {
     if (showMenu === null) {
       setShowMenu(true);
@@ -29,7 +33,7 @@ const Header = () => {
   };
 
   const activeOptions = () => {
-    setShowMenu(!showMenu);
+    setShowOptions(!showOptions);
   };
 
   useEffect(() => {
@@ -55,9 +59,27 @@ const Header = () => {
       }, 500);
     }
   }, [showMenu]);
+
+  useEffect(() => {
+    if (showOptions) {
+      setHiddenOptions("");
+      setOptionsAnimation("animate__faster	500ms animate__fadeIn");
+      setAnimationPading("pb-5");
+    } else {
+      setOptionsAnimation("animate__faster	500ms animate__fadeOut");
+
+      setTimeout(() => {
+        setHiddenOptions("hidden");
+        setAnimationPading("pb-0");
+      }, 200);
+    }
+  }, [showOptions]);
+
   return (
     <div>
-      <div className="relative flex justify-start items-start 900px:justify-between">
+      <div
+        className={`relative flex justify-start items-start 900px:justify-between transition-all duration-100 ${animationPading}`}
+      >
         {/* <div
         id="social-networks"
         className={`flex justify-center items-center ${activeBlur} `}
@@ -140,7 +162,10 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="mt-2 flex justify-start items-center">
+      <div
+        className={`animate__animated  mt-2 flex justify-start items-center 
+        ${hiddenOptions} ${optionsAnimation}`}
+      >
         <div className="mr-2">
           <Session login={true} />
         </div>
