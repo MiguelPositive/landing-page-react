@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useContext } from "react";
+import { store } from "../context/Context";
 
 const Inputs = ({ label, type, element }) => {
   const [padingPass, setPadingPass] = useState("pr-3");
@@ -7,8 +9,42 @@ const Inputs = ({ label, type, element }) => {
   const [changeEye, setChangeEye] = useState("bi bi-eye-slash-fill");
   const [typeInput, setTypeInput] = useState("password");
 
+  const [value, setValue] = useState("");
+
+  const { setName, setEmail, setContact, setUser, setPassword, showRegister } =
+    useContext(store);
+
   const handleChangeEye = () => {
     setShowEye(!showEye);
+  };
+
+  const handleChangeValues = (e) => {
+    setValue(e.target.value);
+    switch (true) {
+      case element == "name":
+        setName(e.target.value);
+
+        break;
+
+      case element == "email":
+        setEmail(e.target.value);
+        break;
+
+      case element == "contact":
+        setContact(e.target.value);
+        break;
+
+      case element == "user":
+        setUser(e.target.value);
+        break;
+
+      case element == "password":
+        setPassword(e.target.value);
+        break;
+
+      default:
+        break;
+    }
   };
 
   useEffect(() => {
@@ -29,6 +65,11 @@ const Inputs = ({ label, type, element }) => {
     }
   }, [showEye]);
 
+  useEffect(() => {
+    if (!showRegister) {
+      setValue("");
+    }
+  }, [showRegister]);
   return (
     <div className=" text-xl">
       <div className="mb-2">
@@ -40,9 +81,11 @@ const Inputs = ({ label, type, element }) => {
       <div>
         <input
           id="input"
-          type={element == "password" ? typeInput : "text"}
+          type={element == "password" ? typeInput : type}
+          value={value}
           className={`relative w-full border-none rounded-md focus:outline-none active:outline-none pl-3 
           ${padingPass}`}
+          onChange={handleChangeValues}
         />
 
         {element == "password" ? (

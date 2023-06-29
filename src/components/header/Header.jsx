@@ -24,6 +24,8 @@ const Header = () => {
   const [animationPading, setAnimationPading] = useState("pb-0");
   const [optionsAnimation, setOptionsAnimation] = useState("");
 
+  const [closeMenu, setCloseMenu] = useState("");
+
   const openMenu = () => {
     if (showMenu === null) {
       setShowMenu(true);
@@ -80,6 +82,15 @@ const Header = () => {
     }
   }, [showOptions]);
 
+  useEffect(() => {
+    if (showRegister) {
+      setCloseMenu("blur pointer-events-none select-none");
+    } else {
+      setTimeout(() => {
+        setCloseMenu("");
+      }, 500);
+    }
+  }, [showRegister]);
   return (
     <div>
       <div
@@ -134,7 +145,7 @@ const Header = () => {
         <div
           id="items-menu"
           className={`${animateMenu}
-       animate__animated absolute z-10 top-0 -right-2 text-xl rounded-md shadow-md w-[92vw] bg-white 350px:w-[80vw] 400px:w-[60vw] 450px:w-[50vw] 750px:w-[40vw] 900px:static 900px:flex 900px:justify-end 900px:items-center 900px:gap-5 900px:w-[60vw] 900px:shadow-none 900px:rounded-s-none`}
+       animate__animated absolute z-10 top-0 -right-2 text-xl rounded-md shadow-md w-[92vw] bg-white 350px:w-[80vw] 400px:w-[60vw] 450px:w-[50vw] 750px:w-[40vw] 900px:static 900px:flex 900px:justify-end 900px:items-center 900px:gap-5 900px:w-[60vw] 900px:shadow-none 900px:rounded-s-none ${closeMenu}`}
         >
           <a href="">
             <div className="text-center mt-5 mb-3 900px:m-0 animation-all duration-75 900px:hover:font-extrabold">

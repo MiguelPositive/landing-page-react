@@ -13,6 +13,12 @@ const Register = () => {
     setActiveBlur,
     showOptions,
     setShowOptions,
+    setName,
+    setEmail,
+    setContact,
+    setUser,
+    setPassword,
+    createUser,
   } = useContext(store);
 
   const [registerAnimation, setRegisterAnimation] = useState("");
@@ -22,11 +28,27 @@ const Register = () => {
     setShowRegister(!showRegister);
   };
 
+  const sendRegister = () => {
+    // console.log(name);
+    // console.log(email);
+    // console.log(contact);
+    // console.log(user);
+    // console.log(password);
+
+    createUser();
+    close();
+
+    setName("");
+    setEmail("");
+    setContact("");
+    setUser("");
+    setPassword("");
+  };
   useEffect(() => {
     if (showRegister) {
       setHiddenRegister("");
       setRegisterAnimation("animate__bounceIn");
-      setActiveBlur("blur 900px:blur-none pointer-events-none select-none");
+      setActiveBlur("blur pointer-events-none select-none");
       setShowOptions(!showOptions);
     } else {
       setRegisterAnimation("animate__bounceOut");
@@ -43,11 +65,11 @@ const Register = () => {
       className={`relative w-full h-full flex justify-center items-center animate__animated z-20 ${hiddenRegister} 
       ${registerAnimation}`}
     >
-      <div className="w-[17rem] rounded-md bg-[#FF6709] absolute -top-5 p-5 shadow-md shadow-black/50 700px:w-[20rem]">
+      <div className="w-[17rem] rounded-md bg-[#FF6709] absolute -top-10 p-5 shadow-md shadow-black/50 350px:w-[20rem]">
         <div className="relative">
           <Close action={close} />
         </div>
-        <h2 className="text-center mt-5 mb-5 text-xl text-white">
+        <h2 className="text-center mt-5 mb-5 text-xl text-white font-bold">
           Registrarse
         </h2>
 
@@ -71,7 +93,7 @@ const Register = () => {
         </div>
         <div className="mb-3">
           <div className="flex justify-center items-center mt-5">
-            <Ok />
+            <Ok action={sendRegister} />
           </div>
         </div>
       </div>
