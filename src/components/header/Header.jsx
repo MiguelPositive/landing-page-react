@@ -13,6 +13,8 @@ const Header = () => {
     setActiveBlur,
     setShowOptions,
     showOptions,
+    showRegister,
+    setShowRegister,
   } = useContext(store);
 
   const [animateMenu, setAnimateMenu] = useState("hidden");
@@ -38,7 +40,7 @@ const Header = () => {
 
   useEffect(() => {
     if (showMenu) {
-      setActiveBlur("blur 900px:blur-none");
+      setActiveBlur("blur 900px:blur-none pointer-events-none select-none");
       setAnimateMenu("animate__bounceIn visible");
     } else if (showMenu === false) {
       setTimeout(() => {
@@ -47,6 +49,10 @@ const Header = () => {
       setAnimateMenu("animate__bounceOut");
     }
   }, [showMenu]);
+
+  const openRegister = () => {
+    setShowRegister(!showRegister);
+  };
 
   useEffect(() => {
     if (showMenu) {
@@ -67,11 +73,10 @@ const Header = () => {
       setAnimationPading("pb-5");
     } else {
       setOptionsAnimation("animate__faster	500ms animate__fadeOut");
-
       setTimeout(() => {
         setHiddenOptions("hidden");
         setAnimationPading("pb-0");
-      }, 200);
+      }, 110);
     }
   }, [showOptions]);
 
@@ -113,7 +118,7 @@ const Header = () => {
       </div> */}
 
         <div
-          className="rounded-full border-2 border-[#FF6709]  p-2 cursor-pointer transition-all duration-100 hover:font-bold hover:text-[#FF6709]"
+          className={`rounded-full border-2 border-[#FF6709]  p-2 cursor-pointer transition-all duration-100 hover:font-bold hover:text-[#FF6709] ${activeBlur}`}
           onClick={activeOptions}
         >
           <i className="mr-2 bi bi-person-circle"></i>
@@ -170,7 +175,7 @@ const Header = () => {
           <Session login={true} />
         </div>
         <div>
-          <Session login={false} />
+          <Session login={false} action={openRegister} />
         </div>
       </div>
     </div>

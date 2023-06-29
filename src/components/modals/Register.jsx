@@ -1,14 +1,51 @@
-import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 import Inputs from "../inputs/Inputs";
 import Ok from "../buttons/Ok";
 import Close from "../buttons/Close";
+import { useContext } from "react";
+import { store } from "../context/Context";
 
 const Register = () => {
+  const {
+    setShowRegister,
+    showRegister,
+    setActiveBlur,
+    showOptions,
+    setShowOptions,
+  } = useContext(store);
+
+  const [registerAnimation, setRegisterAnimation] = useState("");
+  const [hiddenRegister, setHiddenRegister] = useState("hidden");
+
+  const close = () => {
+    setShowRegister(!showRegister);
+  };
+
+  useEffect(() => {
+    if (showRegister) {
+      setHiddenRegister("");
+      setRegisterAnimation("animate__bounceIn");
+      setActiveBlur("blur 900px:blur-none pointer-events-none select-none");
+      setShowOptions(!showOptions);
+    } else {
+      setRegisterAnimation("animate__bounceOut");
+
+      setTimeout(() => {
+        setHiddenRegister("hidden");
+        setActiveBlur("");
+      }, 500);
+    }
+  }, [showRegister]);
+
   return (
-    <div className="hidden w-full h-full flex justify-center items-center">
-      <div className="w-[17rem] rounded-md bg-[#FF6709] absolute top-8 p-5 z-20 shadow-md shadow-black/50 700px:w-[20rem]">
+    <div
+      className={`relative w-full h-full flex justify-center items-center animate__animated z-20 ${hiddenRegister} 
+      ${registerAnimation}`}
+    >
+      <div className="w-[17rem] rounded-md bg-[#FF6709] absolute -top-5 p-5 shadow-md shadow-black/50 700px:w-[20rem]">
         <div className="relative">
-          <Close />
+          <Close action={close} />
         </div>
         <h2 className="text-center mt-5 mb-5 text-xl text-white">
           Registrarse

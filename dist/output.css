@@ -1196,6 +1196,18 @@ input:checked + .toggle-bg {
   bottom: 0.5rem;
 }
 
+.-top-2 {
+  top: -0.5rem;
+}
+
+.-top-4 {
+  top: -1rem;
+}
+
+.-top-5 {
+  top: -1.25rem;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -1724,6 +1736,12 @@ input:checked + .toggle-bg {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .snap-x {

@@ -9,6 +9,8 @@ const Context = ({ children }) => {
   const [activeBlur, setActiveBlur] = useState("");
 
   const [showOptions, setShowOptions] = useState(false);
+
+  const [showRegister, setShowRegister] = useState(false);
   return (
     <store.Provider
       value={{
@@ -18,6 +20,8 @@ const Context = ({ children }) => {
         setActiveBlur,
         showOptions,
         setShowOptions,
+        setShowRegister,
+        showRegister,
       }}
     >
       {children}

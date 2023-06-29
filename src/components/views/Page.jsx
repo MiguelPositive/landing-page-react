@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../header/Header";
 import Banner from "../banner/Banner";
 import PageCarousel from "../carousel/PageCarousel";
@@ -7,18 +7,17 @@ import Title from "../help/Title";
 import Results from "../results/Results";
 import Iam from "../iam/Iam";
 import Testimonials from "../testimonials/Testimonials";
-import Login from "../modals/Login";
 import Register from "../modals/Register";
 import { useContext } from "react";
 import { store } from "../context/Context";
 
 const Page = () => {
-  const { showMenu } = useContext(store);
+  const { showMenu, showRegister } = useContext(store);
 
   return (
     <div
       className={`pb-10 900px:pb-5 h-screen  ${
-        showMenu ? "overflow-hidden" : ""
+        showMenu || showRegister ? "overflow-hidden" : ""
       }`}
     >
       <div className="pl-5 pr-5 pt-3 900px:pl-16  900px:pr-16">
