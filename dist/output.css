@@ -2512,6 +2512,21 @@ input:checked + .toggle-bg {
   background-color: rgb(182 58 34 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#ABD45A\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(171 212 90 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#5E34A3\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(94 52 163 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#74AD4F\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(116 173 79 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }

@@ -3,10 +3,17 @@ import { useEffect } from "react";
 import { useContext } from "react";
 import { store } from "../context/Context";
 import Register from "../modals/Register";
+import Session from "../buttons/Session";
 
 const Header = () => {
-  const { showMenu, setShowMenu, activeBlur, setActiveBlur } =
-    useContext(store);
+  const {
+    showMenu,
+    setShowMenu,
+    activeBlur,
+    setActiveBlur,
+    setShowOptions,
+    showOptions,
+  } = useContext(store);
 
   const [animateMenu, setAnimateMenu] = useState("hidden");
   const [changeIcon, setChangeIcon] = useState("bi bi-list");
@@ -19,6 +26,10 @@ const Header = () => {
     } else {
       setShowMenu(true);
     }
+  };
+
+  const activeOptions = () => {
+    setShowMenu(!showMenu);
   };
 
   useEffect(() => {
@@ -45,8 +56,9 @@ const Header = () => {
     }
   }, [showMenu]);
   return (
-    <div className="relative flex justify-start items-start 900px:justify-between">
-      {/* <div
+    <div>
+      <div className="relative flex justify-start items-start 900px:justify-between">
+        {/* <div
         id="social-networks"
         className={`flex justify-center items-center ${activeBlur} `}
       >
@@ -78,50 +90,63 @@ const Header = () => {
         </div>
       </div> */}
 
-      <div className="rounded-full border-2 border-[#FF6709]  p-2 cursor-pointer transition-all duration-100 hover:font-bold hover:text-[#FF6709]">
-        <i class="mr-2 bi bi-person-circle"></i>
-        Unete
+        <div
+          className="rounded-full border-2 border-[#FF6709]  p-2 cursor-pointer transition-all duration-100 hover:font-bold hover:text-[#FF6709]"
+          onClick={activeOptions}
+        >
+          <i className="mr-2 bi bi-person-circle"></i>
+          Unete
+        </div>
+
+        <i
+          id="button-menu"
+          className={`${changeIcon} absolute top-0 right-0 bi bi-list text-3xl cursor-pointer 900px:hidden`}
+          onClick={openMenu}
+        ></i>
+
+        <div
+          id="items-menu"
+          className={`${animateMenu}
+       animate__animated absolute z-10 top-0 -right-2 text-xl rounded-md shadow-md w-[92vw] bg-white 350px:w-[80vw] 400px:w-[60vw] 450px:w-[50vw] 750px:w-[40vw] 900px:static 900px:flex 900px:justify-end 900px:items-center 900px:gap-5 900px:w-[60vw] 900px:shadow-none 900px:rounded-s-none`}
+        >
+          <a href="">
+            <div className="text-center mt-5 mb-3 900px:m-0 animation-all duration-75 900px:hover:font-extrabold">
+              ¿Quién soy?
+            </div>
+          </a>
+
+          <a href="">
+            <div className="text-center mb-3 animation-all duration-75 900px:m-0 900px:hover:font-bold">
+              Por la comunidad
+            </div>
+          </a>
+
+          <a href="">
+            <div className="text-center mb-3 animation-all duration-75 900px:m-0 900px:hover:font-bold">
+              Resultados
+            </div>
+          </a>
+
+          <a href="">
+            <div className="text-center mb-5 animation-all duration-75 900px:m-0 900px:hover:font-bold">
+              Testimonios
+            </div>
+          </a>
+          <a href="">
+            <div className="text-center mb-5 animation-all duration-75 900px:m-0 900px:hover:font-bold">
+              Grupo de trabajo
+            </div>
+          </a>
+        </div>
       </div>
 
-      <i
-        id="button-menu"
-        className={`${changeIcon} absolute top-0 right-0 bi bi-list text-3xl cursor-pointer 900px:hidden`}
-        onClick={openMenu}
-      ></i>
-
-      <div
-        id="items-menu"
-        className={`${animateMenu}
-       animate__animated absolute z-10 top-0 -right-2 text-xl rounded-md shadow-md w-[92vw] bg-white 350px:w-[80vw] 400px:w-[60vw] 450px:w-[50vw] 750px:w-[40vw] 900px:static 900px:flex 900px:justify-end 900px:items-center 900px:gap-5 900px:w-[60vw] 900px:shadow-none 900px:rounded-s-none`}
-      >
-        <a href="">
-          <div className="text-center mt-5 mb-3 900px:m-0 animation-all duration-75 900px:hover:font-extrabold">
-            ¿Quién soy?
-          </div>
-        </a>
-
-        <a href="">
-          <div className="text-center mb-3 animation-all duration-75 900px:m-0 900px:hover:font-bold">
-            Por la comunidad
-          </div>
-        </a>
-
-        <a href="">
-          <div className="text-center mb-3 animation-all duration-75 900px:m-0 900px:hover:font-bold">
-            Resultados
-          </div>
-        </a>
-
-        <a href="">
-          <div className="text-center mb-5 animation-all duration-75 900px:m-0 900px:hover:font-bold">
-            Testimonios
-          </div>
-        </a>
-        <a href="">
-          <div className="text-center mb-5 animation-all duration-75 900px:m-0 900px:hover:font-bold">
-            Grupo de trabajo
-          </div>
-        </a>
+      <div className="mt-2 flex justify-start items-center">
+        <div className="mr-2">
+          <Session login={true} />
+        </div>
+        <div>
+          <Session login={false} />
+        </div>
       </div>
     </div>
   );
